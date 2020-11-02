@@ -6,9 +6,9 @@ import java.sql.SQLException;
 
 public class DBConnection {
 	
-	private final static String URL = "jdbc:mysql//localhost:3306/test";
+	private final static String URL = "jdbc:mysql://localhost:3306/mechanical_keyboards";
 	private final static String USERNAME = "root";
-	private final static String PASSWORD = "password";
+	private final static String PASSWORD = "Gr33nl3@f22@";
 	//singleton pattern - only 1 connection allowed
 	private static Connection connection;
 	private static DBConnection instance;

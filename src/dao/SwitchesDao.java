@@ -12,7 +12,7 @@ import entity.Switches;
 public class SwitchesDao {
 	
 	private Connection connection;
-	private final String GET_SWITCHES_BY_CASE_ID_QUERY = "SELECT * FROM switches WHERE case_id = ?";
+	private final String GET_SWITCHES_BY_CASE_ID_QUERY = "SELECT * FROM switches WHERE case_id_fk = ?";
 	
 	public SwitchesDao() {
 		connection = DBConnection.getConnection();
