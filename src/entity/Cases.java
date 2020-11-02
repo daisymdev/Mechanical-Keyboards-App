@@ -1,17 +1,20 @@
 package entity;
 
+import java.util.List;
+
 public class Cases {
 	
 	private int caseId; 
 	private String material;
-	private int sizePercentage;
+	private List<Switches> switches;
 	
 	//constructor
-	public Cases(int caseId, String material, int sizePercentage) {
+	public Cases(int caseId, String material, List<Switches> switches) {
 		this.setCaseId(caseId);
 		this.setMaterial(material); 
-		this.setSizePercentage(sizePercentage);
+		this.setSwitches(switches);
 	}
+
 
 	public int getCaseId() {
 		return caseId;
@@ -29,12 +32,22 @@ public class Cases {
 		this.material = material;
 	}
 
-	public int getSizePercentage() {
-		return sizePercentage;
+//	public int getSizePercentage() {
+//		return sizePercentage;
+//	}
+//
+//	public void setSizePercentage(int sizePercentage) {
+//		this.sizePercentage = sizePercentage;
+//	}
+
+
+	public List<Switches> getSwitches() {
+		return switches;
 	}
 
-	public void setSizePercentage(int sizePercentage) {
-		this.sizePercentage = sizePercentage;
+
+	public void setSwitches(List<Switches> switches) {
+		this.switches = switches;
 	}
 
 }
