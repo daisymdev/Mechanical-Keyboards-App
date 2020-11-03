@@ -6,12 +6,14 @@ public class Cases {
 	
 	private int caseId; 
 	private String material;
+	private String sizePercentage;
 	private List<Switches> switches;
 	
 	//constructor
-	public Cases(int caseId, String material, List<Switches> switches) {
+	public Cases(int caseId, String material, String sizePercentage, List<Switches> switches) {
 		this.setCaseId(caseId);
 		this.setMaterial(material); 
+		this.setSizePercentage(sizePercentage);
 		this.setSwitches(switches);
 	}
 
@@ -32,13 +34,13 @@ public class Cases {
 		this.material = material;
 	}
 
-//	public int getSizePercentage() {
-//		return sizePercentage;
-//	}
-//
-//	public void setSizePercentage(int sizePercentage) {
-//		this.sizePercentage = sizePercentage;
-//	}
+	public String getSizePercentage() {
+		return sizePercentage;
+	}
+
+	public void setSizePercentage(String sizePercentage2) {
+		this.sizePercentage = sizePercentage2;
+	}
 
 
 	public List<Switches> getSwitches() {

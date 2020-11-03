@@ -7,6 +7,7 @@ import java.util.Scanner;
 
 import dao.CasesDao;
 import entity.Cases;
+import entity.Switches;
 
 public class Menu {
 	
@@ -32,7 +33,7 @@ public class Menu {
 				if (selection.equals("1")) {
 					displayCases(); 
 				} else if (selection.contentEquals("2")) {
-					//displayCase();
+					displayCase();
 				} else if (selection.contentEquals("3")) {
 					//createCase();
 				} else if (selection.contentEquals("4")) {
@@ -60,10 +61,24 @@ public class Menu {
 	
 	private void displayCases() throws SQLException {
 		List<Cases> Cases = CaseDao.getCases();
+		System.out.println("\n");
 		
 		for(Cases cases : Cases) {
 			System.out.println(cases.getCaseId() + " : " + cases.getMaterial());
 		}
 	}
+	
+	public void displayCase() throws SQLException {
+		System.out.println("Enter Case Id: ");
+		int id = Integer.parseInt(scanner.nextLine());
+		
+		Cases cases = CaseDao.getCaseById(id);
+		System.out.println(cases.getCaseId() + ": " + cases.getMaterial());
+		for (Switches switches : cases.getSwitches()) {
+			System.out.println();
+		}
+	}
+	
+	
 
 }
